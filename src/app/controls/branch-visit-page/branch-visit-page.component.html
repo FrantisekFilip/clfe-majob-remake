@@ -1,0 +1,20 @@
+<mat-card class="citizen-application-panel">
+    <mat-card-header>
+        <mat-card-title>Nesplnění podmínek pro pokračování ve sjednání</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="primary-border p-2">
+        <section>
+            Bohužel Vámi sjednané pojištění nelze nyní sjednat on-line. V případě
+            Vašeho zájmu o toto pojištění, či o poskytnutí dalších informací k
+            pojištění se můžete obrátit na kteroukoliv naší <a [routerLink]="" (click)="redirect()">pobočku</a>, či nás
+            kontaktovat na telefonním čísle/emailu uvedeném níže.
+        </section>
+        <section>
+            <div fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="20px">
+                <button mat-flat-button color="primary" fxFlex="0.2 0 auto" (click)="close()">
+                    Zavřít
+                </button>
+            </div>
+        </section>
+    </mat-card-content>
+</mat-card>

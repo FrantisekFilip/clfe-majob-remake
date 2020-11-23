@@ -1,0 +1,40 @@
+// TODO - handle .mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled)
+.mat-select-panel {
+  .mat-option:not(.mat-active) span.mat-option-text {
+    color: $default-color;
+  }
+  .mat-option {
+    span.mat-option-text:hover {
+      color: $bright-color;
+    }
+  }
+}
+
+.mat-select-value {
+  color: $dark-color;
+}
+
+/*  .mat-slide-toggle {
+    &.mat-checked {
+      .mat-slide-toggle-bar::after {
+        content: 'ON';
+        font-size: 45%;
+        font-weight: 700;
+        color: black;
+        position: absolute;
+        left: 4px;
+        top: -5px;
+      }
+    }
+    &:not(.mat-checked) {
+      .mat-slide-toggle-bar::after {
+        content: 'OFF';
+        font-size: 45%;
+        font-weight: 700;
+        color: white;
+        position: absolute;
+        left: 21px;
+        top: -5px;
+      }
+    }
+  }*/

@@ -1,0 +1,12 @@
+@import "../../themes//green-theme.scss";
+
+.stepper-header {
+  @extend .panel-rounded-darker;
+  color: $bright-color;
+  width: 30%;
+}
+
+.stepper-content {
+  @extend .panel-rounded-default;
+  width: 70%;
+}

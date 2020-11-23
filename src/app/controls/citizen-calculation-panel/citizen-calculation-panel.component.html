@@ -1,0 +1,16 @@
+<div class="padding-bottom-small">
+    <app-select-field [options]="aggregateIndemnities" [selected]="selectedAggregateIndemnity"
+        (valueChange)="onAggregateIndemnityChange($event)" [parentForm]="panelControl">
+        <span translate>parameters.aggregateIndemnity</span>
+    </app-select-field>
+    <app-select-field [options]="territorialScales" [selected]="selectedTerritorialScale"
+        (valueChange)="onTerritorialScaleChange($event)" [parentForm]="panelControl">
+        <span translate>parameters.territorialScale</span>
+    </app-select-field>
+    <app-select-field [options]="coinsurances" [selected]="selectedCoinsurance"
+        (valueChange)="onCoinsuranceChange($event)" [parentForm]="panelControl">
+        <span translate>parameters.coinsurance</span>
+    </app-select-field>
+    <app-product-summary-panel [discount]="discount" [yearlyInsurance]="yearlyInsurance" [parentForm]="panelControl">
+    </app-product-summary-panel>
+</div>

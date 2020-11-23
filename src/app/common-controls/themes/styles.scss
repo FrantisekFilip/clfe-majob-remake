@@ -1,0 +1,72 @@
+@import "units.scss";
+@import "spacings.scss";
+
+.panel-rounded {
+  border-radius: $size-smallest;
+}
+
+.border-solid {
+  border-width: $size-unit / 2;
+  border-style: solid;
+  border-radius: $size-largest;
+}
+
+.form-field-label {
+  margin: $size-tiny;
+  width: 50%;
+  overflow-wrap: break-word;
+}
+
+.form-toggle-field-label {
+  margin: $size-tiny;
+  width: 80%;
+  overflow-wrap: break-word;
+}
+
+.form-field-value {
+  @extend .padding-left-medium;
+  overflow-wrap: break-word;
+}
+
+.form-panel-shape {
+  @extend .panel-rounded;
+  @extend .padding-medium;
+}
+
+.form-section-panel-shape {
+  @extend .panel-rounded;
+  @extend .margin-vertical-smallest;
+  @extend .padding-horizontal-medium;
+  @extend .padding-vertical-small;
+}
+
+.form-inner-panel-shape {
+  @extend .panel-rounded;
+  @extend .padding-small;
+  @extend .margin-top-small;
+}
+
+.section-button-shape {
+  @extend .border-solid;
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+}
+
+.flat-button.mat-flat-button {
+  height: $size-unit * 12;
+  width: $size-unit * 36;
+  border-radius: $size-largest !important;
+}
+
+.stroked-button.mat-stroked-button {
+  height: $size-unit * 12;
+  border-radius: $size-largest !important;
+}
+
+.ul-reduced-format {
+  @extend .padding-horizontal-small;
+  list-style-type: none;
+}
+
+@import "style-overrides.scss";

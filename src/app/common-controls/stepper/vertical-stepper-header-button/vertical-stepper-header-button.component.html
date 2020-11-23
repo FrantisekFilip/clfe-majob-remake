@@ -1,0 +1,7 @@
+<span fxLayout="row" fxLayoutAlign="start center">
+    <span [ngClass]="active ? 'active circle margin-right-smallest': 'circle margin-right-smallest'"></span>
+    <span *ngIf="!last" [ngClass]="active?'line-active':'line'"></span>
+    <button mat-flat-button class="clickable" (click)="emitClick()">
+        <ng-content></ng-content>
+    </button>
+</span>

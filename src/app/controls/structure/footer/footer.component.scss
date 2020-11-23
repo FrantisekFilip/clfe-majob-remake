@@ -1,0 +1,9 @@
+@import "./../../../../styles";
+
+.bg-footer {
+  background-color: $default-color;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+}

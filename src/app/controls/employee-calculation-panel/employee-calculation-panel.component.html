@@ -1,0 +1,34 @@
+<div class="padding-bottom-small">
+    <div>
+        <app-select-field [options]="aggregateIndemnities" [selected]="selectedAggregateIndemnity"
+            (valueChange)="onAggregateIndemnityChange($event)" [parentForm]="panelControl">
+            <span translate>parameters.aggregateIndemnity</span>
+        </app-select-field>
+        <app-select-field [options]="territorialScales" [selected]="selectedTerritorialScale"
+            (valueChange)="onTerritorialScaleChange($event)" [parentForm]="panelControl">
+            <span translate>parameters.territorialScale</span>
+        </app-select-field>
+        <app-money-label [value]="entrustedThingsLossLimit" displayBold="true">
+            <span translate>parameters.entrustedThingsLossLimit</span>
+        </app-money-label>
+    </div>
+    <br>
+    <b>
+        <p translate>steps.calculation.employeeOptions.description</p>
+    </b>
+    <app-slide-toggle-field [checked]='mainVehicleChecked' labelPosition="before" [parentForm]="panelControl">
+        <app-translated-label label="parameters.mainVehicle"></app-translated-label>
+    </app-slide-toggle-field>
+    <app-slide-toggle-field [checked]='otherVehiclesChecked' labelPosition="before" [parentForm]="panelControl">
+        <app-translated-label label="parameters.otherVehicles"></app-translated-label>
+    </app-slide-toggle-field>
+    <app-slide-toggle-field [checked]='noClaimBonus' labelPosition="before" disabled="true" [parentForm]="panelControl">
+        <app-help-icon-button><span translate>parameters.noClaimBonus</span></app-help-icon-button>
+    </app-slide-toggle-field>
+    <br>
+    <app-text-label [value]="coinsurance">
+        <span translate>parameters.coinsurance</span>
+    </app-text-label>
+    <app-product-summary-panel [discount]="discount" [yearlyInsurance]="yearlyInsurance" [parentForm]="panelControl">
+    </app-product-summary-panel>
+</div>

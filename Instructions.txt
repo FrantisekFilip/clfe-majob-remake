@@ -1,0 +1,27 @@
+Organizace projektu:
+    -   doc - zadavaci dokumentace
+
+Moduly
+---------
+3 zakladni typy modulu:
+    -   "hloupe vizualni komponenty" - komponenty s jasnymi Input/Output bez side-efektu ci jinymi interakcemi s okolim (napr. bindovane sluzby)
+        -   common-simplecontrols - zakladni sdilene komponenty
+    -   "chytre vizualni komponenty" - komponenty interagujici s okolim
+        -   common-controls - zakladni sdilene chytre komponenty
+        -   bu-controls - sdilene business chytre komponenty
+        -   payments - specialni modul pro realizaci online platby
+    -   "sluzby" - nevizuální komponenty (knihovny)
+        -   common-services - zakladni sdilene sluzby (infrastruktura aplikace)
+
+Samotna aplikace neposkytuje moduly, pouze je organizovana do adresaru
+    -   controls - vizualni komponenty
+    -   services - lokalni sluzby
+
+Vizualizace (CSS)
+--------------------
+Postaveno na zakladni theme Material Designu, rozsireno v common-simplecontrols/themes/*. Vsechny moduly vizualnich komponent by mely odkazovat theme odtud.
+Do globano styles.scss by idealne nemelo nic prijit, maximalni velmi aplikacni specificke definice.
+
+Routing
+----------
+Kazdy modul poskytujici ucelenou business funkcnost (napr. payments) by mel mit vlastni routing tridu. Tam je pote importovana do globalniho app-routing-module.ts.

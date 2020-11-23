@@ -1,0 +1,58 @@
+<section>
+    <app-vertical-stepper [headerDescription]="productName" linear #stepper (selectionChange)="stepperChanged($event)"
+        [selectedIndex]="selectedIndex">
+        <cdk-step [stepControl]="calcForm" [label]="'steps.calculation.title' | translate">
+            <form [formGroup]="calcForm" class="form-panel">
+                <h2>(1/5) {{'steps.calculation.title' | translate}}</h2>
+                <div class="panel-rounded-bright margin-vertical-medium">
+                    <ng-container *ngIf="isCitizenInsurance()">
+                        <app-citizen-application-panel [parentForm]="calcForm">
+                        </app-citizen-application-panel>
+                    </ng-container>
+                    <ng-container *ngIf="isEmployeeInsurance()">
+                        <app-employee-application-panel [parentForm]="calcForm">
+                        </app-employee-application-panel>
+                    </ng-container>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center" class="padding-small">
+                    <app-back-button [redirectTo]="homeRoute" class="margin-right-small"></app-back-button>
+                    <app-stepper-next-button class="margin-left-small"></app-stepper-next-button>
+                </div>
+            </form>
+        </cdk-step>
+        <cdk-step [stepControl]="addInfoForm" [label]="'steps.addInfo.title' | translate">
+            <form [formGroup]="addInfoForm" class="form-panel">
+                <app-additional-info-panel [title]="'(2/5) ' + ('steps.addInfo.title' | translate)"
+                    [parentForm]="addInfoForm">
+                </app-additional-info-panel>
+                <app-stepper-buttons></app-stepper-buttons>
+            </form>
+        </cdk-step>
+        <cdk-step [stepControl]="summaryPage" [label]="'steps.summary.titleShort' | translate">
+            <div class="form-panel">
+                <app-summary-page [title]="'(3/5) ' + ('steps.summary.title' | translate)"></app-summary-page>
+                <div fxLayout="row" fxLayoutAlign="center center" class="padding-small">
+                    <app-stepper-back-button class="margin-right-small"></app-stepper-back-button>
+                    <button class="stroked-button margin-left-small" mat-stroked-button matStepperNext>
+                        <span translate>steps.summary.buttons.advanceToPayment</span>
+                    </button>
+                </div>
+            </div>
+        </cdk-step>
+        <cdk-step [stepControl]="paymentPage" [label]="'Volba platební metody'">
+            <app-payment-page title="(4/5) Volba platební metody"></app-payment-page>
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <app-stepper-back-button></app-stepper-back-button>
+            </div>
+        </cdk-step>
+        <cdk-step [stepControl]="finalPage" [label]="'Smluvní dokumentace'">
+            <app-final-page title="(5/5) Smluvní dokumentace"></app-final-page>
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <app-back-button [redirectTo]="homeRoute"></app-back-button>
+            </div>
+        </cdk-step>
+    </app-vertical-stepper>
+</section>
+<section>
+    <app-terms-conditions-panel *ngIf="showTerms"></app-terms-conditions-panel>
+</section>

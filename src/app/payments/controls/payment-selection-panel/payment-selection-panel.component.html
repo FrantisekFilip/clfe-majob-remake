@@ -1,0 +1,10 @@
+<span>
+    <div fxLayout="column" fxLayoutAlign="center center" *ngIf="showRetryMessage()">Platba přes GoPay se nezdařila,
+        prosím
+        opakujte platbu, nebo zvolte Zaplatit převodem později.
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <app-express-payment-button [payment]="payment"></app-express-payment-button>
+        <app-delayed-payment-button [payment]="payment"></app-delayed-payment-button>
+    </div>
+</span>

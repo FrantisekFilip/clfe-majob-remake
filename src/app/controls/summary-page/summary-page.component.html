@@ -1,0 +1,50 @@
+<section>
+    <h2>{{title}}</h2>
+    <div class="form-section-panel">
+        <h3 translate>steps.summary.products</h3>
+        <ng-container *ngFor="let product of products">
+            <app-help-icon-button><b>{{product.name}}</b></app-help-icon-button>
+        </ng-container>
+        <app-date-label [value]="commencementDate">
+            <b><span translate>parameters.commencementDate</span></b>
+        </app-date-label>
+        <app-text-label [value]="insurancePeriod">
+            <b><span translate>parameters.insurancePeriod</span></b>
+        </app-text-label>
+        <app-enumeration-label [value]="contractDuration">
+            <b><span translate>parameters.duration</span></b>
+        </app-enumeration-label>
+        <div fxLayout="row" fxLayoutAlign="start start">
+            <b><span class="form-field-label" translate>application.policyHolder</span></b>
+            <div class="form-field-value">
+                <app-address-info-panel [person]="policyHolder" [address]="mainAddress"></app-address-info-panel>
+            </div>
+        </div>
+        <span *ngIf="!hasInsuredPerson">
+            <b><span translate>steps.summary.noOtherInsuredPerson</span></b>
+        </span>
+        <app-text-label *ngIf="hasInsuredPerson" [value]="insurancePeriod">
+            <b><span translate>application.insuredPersonName</span></b>
+        </app-text-label>
+        <app-email-label [value]="email">
+            <b><span translate>steps.summary.email</span></b>
+        </app-email-label>
+        <app-phone-number-label [value]="phoneNumber">
+            <b><span translate>steps.summary.phoneNumber</span></b>
+        </app-phone-number-label>
+        <app-money-label [value]="totalYearlyInsurance">
+            <b><span translate>summary.totalYearlyInsurance</span></b>
+        </app-money-label>
+        <app-enumeration-label [value]="instalmentFrequency">
+            <b><span translate>parameters.instalmentFrequency</span></b>
+        </app-enumeration-label>
+        <app-money-label [value]="payment">
+            <b><span translate>summary.payment</span></b>
+        </app-money-label>
+        <span fxLayout="row" fxLayoutAlign="space-between center">
+            <app-translated-label label="steps.summary.contractPreview"></app-translated-label>
+            <app-icon icon="download_icon"></app-icon>
+        </span>
+        <app-translated-label label="steps.summary.disclaimer"></app-translated-label>
+    </div>
+</section>

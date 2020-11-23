@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+    <div class="form-field-label">
+        <ng-content></ng-content>
+    </div>
+    <div>
+        <mat-form-field appearance="fill" class="date-field">
+            <input matInput type="date" [formControl]="fieldControl" [placeholder]="placeholder">
+        </mat-form-field>
+    </div>
+</div>

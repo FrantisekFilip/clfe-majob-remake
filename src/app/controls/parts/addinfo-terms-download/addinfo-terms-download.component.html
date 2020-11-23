@@ -1,0 +1,9 @@
+<div fxLayout="row" fxLayoutAlign="space-between start">
+    <span fxLayout="row" fxLayoutAlign="start start">
+        <app-checkbox-label labelPosition="after" [checked]="checked"></app-checkbox-label>
+        <div style="color: black;">
+            <ng-content></ng-content>
+        </div>
+    </span>
+    <app-icon icon="download_icon"></app-icon>
+</div>

@@ -1,0 +1,15 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+    <div class="form-field-label">
+        <ng-content></ng-content>
+    </div>
+    <div>
+        <mat-form-field appearance="none" class="select-field">
+            <mat-select [(value)]="selected" (valueChange)="onChange($event)" [formControl]="fieldControl"
+                [placeholder]="placeholder">
+                <mat-option *ngFor="let option of options" [value]="option.code">
+                    {{option.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>

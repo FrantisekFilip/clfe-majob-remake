@@ -1,0 +1,25 @@
+<section class="form-section-panel">
+    <app-help-icon-button>{{citizenInsuranceProductName}}</app-help-icon-button>
+    <app-citizen-calculation-panel [parentForm]="panelControl"></app-citizen-calculation-panel>
+</section>
+<section class="panel-colors-lighter padding-vertical-small">
+    <ng-container *ngIf="!isEmployeeActive()">
+        <app-add-section-button [action]="addOrRemoveEmployeeSection">
+            <span translate>steps.calculation.addEmployeeInsurance</span>
+        </app-add-section-button>
+    </ng-container>
+    <ng-container *ngIf="isEmployeeActive()">
+        <div fxLayout="column" class="panel-rounded-bright padding-small">
+            <span fxLayout="row" fxLayoutAlign="space-between center">
+                <app-help-icon-button>{{employeeInsuranceProductName}}</app-help-icon-button>
+                <app-remove-section-button [action]="addOrRemoveEmployeeSection">
+                    <span translate>steps.calculation.removeEmployeeInsurance</span>
+                </app-remove-section-button>
+            </span>
+            <app-employee-calculation-panel [parentForm]="panelControl"></app-employee-calculation-panel>
+        </div>
+    </ng-container>
+</section>
+<section class="form-section-panel">
+    <app-calculation-summary-panel [parentForm]="panelControl"></app-calculation-summary-panel>
+</section>

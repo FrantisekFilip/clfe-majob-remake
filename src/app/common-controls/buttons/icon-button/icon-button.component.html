@@ -1,0 +1,11 @@
+<span>
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <button mat-icon-button *ngIf="iconBeforeContent">
+            <mat-icon>{{icon}}</mat-icon>
+        </button>
+        <ng-content></ng-content>
+        <button mat-icon-button *ngIf="iconAfterContent">
+            <mat-icon>{{icon}}</mat-icon>
+        </button>
+    </div>
+</span>

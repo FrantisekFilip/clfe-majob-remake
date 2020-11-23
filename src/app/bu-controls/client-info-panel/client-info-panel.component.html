@@ -1,0 +1,45 @@
+<h3><b>{{header}}</b></h3>
+<div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="start end">
+        <div fxLayout="row" style="width: 50%;">
+            <app-text-field [value]="clientInfo.titleBN" [parentForm]="panelControl">
+                <span translate>client.titleBN</span>
+            </app-text-field>
+            <app-text-field [value]="clientInfo.titleAN" [parentForm]="panelControl">
+                <span translate>client.titleAN</span>
+            </app-text-field>
+        </div>
+        <div>
+            <span translate>client.birthDate</span>
+            <app-date-field [value]="clientInfo.birthDate" [parentForm]="panelControl">
+            </app-date-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start end">
+        <div style="width:50%">
+            <app-text-field [value]="clientInfo.firstName" [parentForm]="panelControl">
+                <span translate>client.firstName</span>
+            </app-text-field>
+        </div>
+        <app-text-field [value]="clientInfo.lastName" [parentForm]="panelControl">
+            <span translate>client.surname</span>
+        </app-text-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start end">
+        <div style="width:50%">
+            <app-birth-number-field [value]="clientInfo.birthNumber" [parentForm]="panelControl">
+                <span translate>client.birthNumber</span>
+            </app-birth-number-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start end">
+        <div style="width:50%">
+            <app-phone-number-field [value]="clientInfo.phoneNumber" [parentForm]="panelControl">
+                <span translate>contacts.phoneNumber</span>
+            </app-phone-number-field>
+        </div>
+        <app-email-field [value]="clientInfo.email" [parentForm]="panelControl">
+            {{emailLabel}}
+        </app-email-field>
+    </div>
+</div>

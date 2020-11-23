@@ -1,0 +1,41 @@
+@import "./../../themes/green-theme";
+
+$line-color: red;
+
+.circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: $line-color;
+  display: inline-block;
+  z-index: 10;
+}
+
+.circle.active {
+  margin-left: -0.1rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: $default-color;
+  border: 0.2rem $line-color;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.line {
+  border-left: 0.1rem solid $line-color;
+  margin-bottom: -3rem;
+  height: 3rem;
+  margin-left: -(0.25rem/2 + 0.5rem / 2 + 0.1rem +0.1rem /2);
+  z-index: 1;
+}
+
+.line-active {
+  border-left: 0.1rem solid $line-color;
+  margin-bottom: -3rem;
+  height: 3rem;
+  margin-left: -(0.25rem/2 + 0.5rem / 2 + 0.1rem +0.1rem /2 + 0.1);
+  z-index: 1;
+}

@@ -1,0 +1,19 @@
+{
+    "client": {
+        "titleBN": "Titul před jménem:",
+        "titleAN": "Titul za jménem:",
+        "firstName": "Jméno:",
+        "surname": "Přijmení:",
+        "birthDate": "Datum narození:",
+        "birthNumber": "Rodné číslo:"
+    },
+    "contacts": {
+        "phoneNumber": "Telefon:"
+    },
+    "address": {
+        "streetName": "Ulice:",
+        "registrationNumber": "Číslo popisné / orientační / evidenční:",
+        "postcode": "PSČ:",
+        "municipality": "Obec:"
+    }
+}

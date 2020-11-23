@@ -1,0 +1,63 @@
+<section class="padding-vertical-small">
+    <mat-accordion>
+        <mat-expansion-panel (opened)="expanded = true" (closed)="expanded = false" hideToggle>
+            <mat-expansion-panel-header #expansionPanelHeader (click)="expansionPanelHeader._toggle()"
+                class="panel-rounded-default">
+                <mat-panel-title>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <span class="clickable" (click)="expansionPanelHeader._toggle()">
+                            <mat-icon svgIcon="download_icon"></mat-icon>
+                            <span translate>terms.documentsToDownload</span>
+                        </span>
+                        <span>
+                            <ng-container *ngIf="!isExpanded()">
+                                <app-expand-button label="Rozbalit"></app-expand-button>
+                            </ng-container>
+                            <ng-container *ngIf="isExpanded()">
+                                <app-collapse-button label="Sbalit"></app-collapse-button>
+                            </ng-container>
+                        </span>
+                    </div>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="row" fxFlexAlign="center center">
+                <div fxFlex="50">
+                    <div fxLayout="column" fxFlexAlign="center center">
+                        <h3 class="text-primary">Pojistné podmínky</h3>
+                        <span fxLayout="row" fxLayoutAlign="space-between center">
+                            <app-icon-label icon="article" label="VPP Majetku s odpovědností
+                        občanů"></app-icon-label>
+                            <app-download-button></app-download-button>
+                        </span>
+                        <span fxLayout="row" fxLayoutAlign="space-between center">
+                            <app-icon-label icon="article" label="DPP Pojištění odpovědností
+                        občanů"></app-icon-label>
+                            <app-download-button></app-download-button>
+                        </span>
+                        <span fxLayout="row" fxLayoutAlign="space-between center">
+                            <app-icon-label icon="article" label="DPP Pojištění odpovědností
+                        zaměstnance za škodu způsobenou zaměstnavateli"></app-icon-label>
+                            <app-download-button></app-download-button>
+                        </span>
+                    </div>
+                </div>
+                <mat-divider [vertical]="true"></mat-divider>
+                <div class="ml-2" fxFlex="50">
+                    <div fxLayout="column" fxFlexAlign="center center">
+                        <h3 class="text-primary">Informační dokument k pojistnému produktu</h3>
+                        <span fxLayout="row" fxLayoutAlign="space-between center">
+                            <app-icon-label icon="article" label="Pojištění odpovědností občanů (IPID)">
+                            </app-icon-label>
+                            <app-download-button></app-download-button>
+                        </span>
+                        <span fxLayout="row" fxLayoutAlign="space-between center">
+                            <app-icon-label icon="article" label="Pojištění odpovědností zaměstnance za škodu způsobenou
+                        zaměstnavateli (IPID)"></app-icon-label>
+                            <app-download-button></app-download-button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</section>

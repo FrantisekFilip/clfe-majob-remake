@@ -1,0 +1,5 @@
+<button class="stroked-button" mat-stroked-button (click)="action()">
+    <mat-icon *ngIf="iconBeforeContent" class="margin-right-smallest">{{icon}}</mat-icon>
+    <ng-content></ng-content>
+    <mat-icon *ngIf="iconAfterContent" class="margin-left-smallest">{{icon}}</mat-icon>
+</button>

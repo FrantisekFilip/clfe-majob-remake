@@ -1,0 +1,50 @@
+<mat-card class="payment-page-panel">
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div fxLayout="column" fxLayoutAlign="center left" *ngIf="paymentSucceeded()">
+            <h2 mat-subheader>Děkujeme Vám za sjednání a úhradu pojištění.</h2>
+            <h4 mat-subheader>Smluvní dokumentace ke stažení (také odeslána na Váš e-mail)</h4>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <app-icon-label icon="check" label="Návrh pojistné smlouvy"></app-icon-label>
+                <app-download-button label=""></app-download-button>
+            </div>
+            <app-icon-label icon="check" label="Pojistné podmínky:"></app-icon-label>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <span>VPP Majetku a odpovědnosti občanů</span>
+                <app-download-button label=""></app-download-button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <span>DPP Pojištění odpovědnosti občanů</span>
+                <app-download-button label=""></app-download-button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <span>DPP Pojištění odvědnosti zaměstnance za škodu způsobenou zaměstnavateli</span>
+                <app-download-button label=""></app-download-button>
+            </div>
+            <app-icon-label icon="check" label="Informační dokument k pojistnému produktu"></app-icon-label>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <span>Pojištění odpovědnosti občanů (IPID)</span>
+                <app-download-button label=""></app-download-button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <span>Pojištění odvědnosti zaměstnance za škodu způsboenou zaměstnavateli (IPID)</span>
+                <app-download-button label=""></app-download-button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <app-icon-label icon="check" label="GDPR - poučení o zpracování osobních údajů"></app-icon-label>
+                <app-download-button label=""></app-download-button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <app-icon-label icon="check" label="Předsmluvní informace"></app-icon-label>
+                <app-download-button label=""></app-download-button>
+            </div>
+            <p mat-line>
+                Smluvní dokumentaci jsme Vám též odeslali na uvedný e-mail. V případě, že by Vám e-mail
+                do několika minut nedorazil, tak nás prosímk kontaktujte na telefonním čísle či e-mailem
+                uvedeným níže, abychom Vám mohli dokumenty zaslat.
+            </p>
+        </div>
+    </mat-card-content>
+</mat-card>

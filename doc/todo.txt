@@ -1,0 +1,39 @@
+Zname problemy:
+-   Globalne
+    -   Layout - implementovat zahlavi a zapati
+    -   Lokalizace textu do anglictiny (referenci soubory)
+    -   Lokalizace ciselniku (projekce lokalizovane view hodnoty)
+    -   Vytvoreni ciselniku men a validace vuci nemu
+    -   Registrace podporovanych jazyku pri startu
+    -   Nacitani dynamicke konfigurace (staticky obsah vne aplikace) pri startu
+    -   Mockovaci projekt pro emulaci dat (ciselniky)
+    -   Oddelit modely ciselniku od ciselniku samotnych
+    -   Presunout aktualizaci ApplicationModel ze stranek do ApplicationDataService (kvuli konzistentnimu prepocitavani souvisejicich atributu)
+    -   Nejsou naimplementovane formularove validace
+-   Ovladaci prvky
+    -   Stepper - nahradit specialni tlacitka direktivami
+    -   Stepper - chybi grafika vpravo dole
+    -   Stepper - opravit grafiku
+    -   RichTranslate - nahradit specialni label direktivou
+    -   Odsazeni Help-icon labelu vs ostatni labely/fieldy
+    -   Dodelat "dokumenty ke stazeni"
+    -   Vypinani "dokumentu ke stazeni" na vybranych obrazovkach
+    -   Omezit maximalni delku Input Fieldu (aby se vesly 3 na radek)
+    -   Stylovat pole pro vkladani datumu
+    -   Panely ne vzdy zakulacuji rohy
+    -   Odstranit ng-deep ze vsech css
+    -   Neprenasi se data z formularu do prehledovych obrazovek
+-   Dialogy
+    -   stylovat Error Dialogy
+    -   stylovat Potvrzovaci Dialogy
+-   Obr. - Doplnujici informace
+    -   Zarovnani radku pro vkladani titulu
+-   Obr. - Rekapitulace
+    -   Tlacitko sjednat ma chybne barvy
+-   Obr. - Nepodarilo se sjednat (visit-branch)
+    -   Chybi styly
+-   Obr. - Volba platebni metody
+    -   Chybi styly
+    -   Nejsou aktivni tlacitka (docasne by mela routovat na success / fail)
+-   Obr. - Smluvni dokumentace
+    -   Chybi styly

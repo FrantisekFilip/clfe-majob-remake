@@ -1,0 +1,15 @@
+<app-select-field [options]="instalmentFrequencies" [selected]="selectedInstalmentFrequency"
+    (valueChange)="onInstalmentFrequencyChange($event)" [parentForm]="panelControl">
+    <span translate>parameters.instalmentFrequency</span>
+</app-select-field>
+<div fxLayout="column" fxFlexAlign="center center" class="form-inner-panel">
+    <app-money-label [value]="payment">
+        <span translate>summary.payment</span>
+    </app-money-label>
+    <br>
+    <b>
+        <app-money-label [value]="totalYearlyInsurance">
+            <span translate>summary.totalYearlyInsurance</span>
+        </app-money-label>
+    </b>
+</div>

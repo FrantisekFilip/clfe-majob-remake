@@ -1,0 +1,74 @@
+{
+    "home": {
+        "title": "Pojištění odpovědnosti - volba pojištění",
+        "welcome": "Způsob sjednání jsme přizpůsobili Vašim potřebám, vyberte si",
+        "description": "Nyní si můžete on-line sjednat pojištění odpovědnosti . Máte-li zájem i o pojištění majetku<br>(vybavení domácnosti, pojištění bytu či rodinného domu), tak se můžete obrátit na naší pobočku<br>nebo nás kontaktovat telefonicky či emailem na kontaktech uvedených níže. Na možnosti sjednání<br>majetkového pojištění on-line intenzivně pracujeme."
+    },
+    "terms": {
+        "documentsToDownload": "Dokumenty ke stažení"
+    },
+    "steps": {
+        "calculation": {
+            "title": "Kalkulace",
+            "addEmployeeInsurance": "Přidat pojištění odpovědnosti zaměstnance za škodu způsobenou zaměstnavateli",
+            "removeEmployeeInsurance": "Odebrat",
+            "addCitizenInsurance": "Přidat pojištění odpovědnosti občanů",
+            "removeCitizenInsurance": "Odebrat",
+            "employeeOptions": {
+                "description": "Pojištění se vztahuje i na škody způsobené v souvislosti s řízením /obsluhou:"
+            }
+        },
+        "addInfo": {
+            "title": "Doplňující informace",
+            "addressTitle": "Adresa bydliště v ČR",
+            "otherContactAddress": "Korespondenční adresa není shodná s adresou bydliště:",
+            "otherInsuredPerson": "Pojistník není shodný s pojištěnou osobou:",
+            "disclaimer": "Upozornění: Podmínkou platnosti pojistné smlouvy je existence pojistného zájmu pojistníka na majetku či odpovědnosti jiné osoby v době uzavření pojistné smlouvy. Pojistník má pojistný zájem, osvědčí-li, že by mu bez jeho existence a uchování hrozila přímá majetková ztráta."
+        },
+        "summary": {
+            "title": "Rekapitulace zvoleného rozsahu pojištění",
+            "titleShort": "Rekapitulace",
+            "buttons": {
+                "advanceToPayment": "Sjednat smlouvu a pokračovat k platbě"
+            },
+            "products": "Pojištění",
+            "noOtherInsuredPerson": "Pojištěný je shodný s pojistníkem.",
+            "email": "E-mail:",
+            "phoneNumber": "Telefon:",
+            "contractPreview": "<b>Náhled na návrh pojistné smlouvy </b><i>(pouze vzor)</i>",
+            "disclaimer":"<p>Tento dokument není nabídkou ani pojistnou smlouvou a slouží pouze ke kontrole údajů a rozsahu pojistné ochrany před sjednáním smlouvy</p><p>Pojistnou smlouvu a pojistku obdržíte v elektronické podobě po sjednání smlouvy.</p>"
+        }
+    },
+    "application": {
+        "policyHolder": "Pojistník:",
+        "insuredPerson": "Pojištěná osoba",
+        "contactEmail": "Kontaktní e-mail pro zaslání pojistných smluv:",
+        "agreements": {
+            "acceptance": "Potvrzuji, že jsem se seznámil s informacemi potřebnými ke sjednání pojistné smlouvy:",
+            "termsAndConditions": "Pojistné podmínky:<br>&emsp;VPP Majetku a odpovědnosti občanů<br>&emsp;DPP Pojištění odpovědnosti občanů<br>&emsp;DPP Pojištění odvědnosti zaměstnance za škodu způsobenou zaměstnavateli",
+            "product": "Informační dokument k pojistnému produktu<br>&emsp;Pojištění odpovědnosti občanů (IPID)<br>&emsp;Pojištění odvědnosti zaměstnance za škodu způsboenou zaměstnavateli (IPID)",
+            "gdpr": "GDPR - poučení o zpracování osobních údajů",
+            "contractualInfo": "Předsmluvní informace",
+            "eContact": "Souhlasím s tím, abych byl v záležitostech týkajících se tohoto pojištění kontaktován prostředky elektronické komunikace (např. e-mail, telefon atd.)."
+        }
+    },
+    "parameters": {
+        "commencementDate": "Datum počátku pojištění:",
+        "insurancePeriod": "Pojistné období:",
+        "duration": "Pojistná doba:",
+        "aggregateIndemnity": "Limit plnění",
+        "territorialScale": "Územní rozsah",
+        "coinsurance": "Spoluúčast",
+        "instalmentFrequency": "Frekvence placení",
+        "entrustedThingsLossLimit": "Limit plnění pro ztrátu svěřených věcí (pracovní nástroje, ochranné pomůcky, apod.):",
+        "mainVehicle": "motocyklu, motokola, osobního a nákladního automobilu, traktoru a&nbsp;autobusu,a to pouze do výše spoluúčasti havarijního pojištění",
+        "otherVehicles": "ostatních dopravních prostředků a pracovních strojů<br>opatřených místem k sezení nebo na dálkové ovládání<br><i>(např.bagr, jeřáb, nakladač, vysokozdvižný vozík)</i>",
+        "noClaimBonus": "Pojištění s benefitem za bezeškodní průběh:"
+    },
+    "summary": {
+        "discount": "Sleva:",
+        "yearlyInsurance": "Roční pojištění:",
+        "payment": "Splátka pojistného:",
+        "totalYearlyInsurance": "Roční pojistné celkem:"
+    }
+}

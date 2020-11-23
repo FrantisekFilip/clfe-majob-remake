@@ -1,0 +1,12 @@
+<mat-card class="payment-page-panel">
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div fxLayout="column" fxLayoutAlign="center left">
+            <h3 mat-subheader>Děkujeme za sjednání pojištění.</h3>
+            <p mat-line>Smlouva se stává platnou v den, kdy bude platba pojistného připsána na účet pojistitele.</p>
+            <app-payment-selection-panel [payment]="payment"></app-payment-selection-panel>
+        </div>
+    </mat-card-content>
+</mat-card>

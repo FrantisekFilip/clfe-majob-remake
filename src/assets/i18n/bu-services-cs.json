@@ -1,0 +1,10 @@
+{
+    "periods": {
+        "years": {
+            "zero": "{0} let",
+            "one": "{0} rok",
+            "twoToFour": "{0} roky",
+            "fiveAndMore": "{0} let"
+        }
+    }
+}

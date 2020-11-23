@@ -1,0 +1,71 @@
+<section>
+    <h2>{{title}}</h2>
+    <div class="form-section-panel">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span style="width: 50%">
+                <b><span translate>parameters.commencementDate</span></b>
+            </span>
+            <app-date-field [value]="commencementDate" [parentForm]="panelControl">
+            </app-date-field>
+        </div>
+        <br>
+        <app-client-info-panel [header]="'application.policyHolder' | translate" [clientInfo]="policyHolder"
+            [parentForm]="panelControl" [emailLabel]="'application.contactEmail' | translate">
+        </app-client-info-panel>
+        <br>
+        <app-active-address-panel [header]="'steps.addInfo.addressTitle' | translate" [address]="mainAddress"
+            [parentForm]="panelControl">
+        </app-active-address-panel>
+        <app-slide-toggle-field labelPosition="before" [checked]="hasContactAddress"
+            (valueChange)="onContactAddressCheckedChange($event)" [parentForm]="panelControl">
+            <span translate>steps.addInfo.otherContactAddress</span>
+        </app-slide-toggle-field>
+        <ng-container *ngIf="hasContactAddress">
+            <app-active-address-panel [header]="'steps.addInfo.addressTitle' | translate" [address]="contactAddress"
+                [parentForm]="panelControl">
+            </app-active-address-panel>
+        </ng-container>
+        <app-slide-toggle-field labelPosition="before" [checked]="hasInsuredPerson"
+            (valueChange)="onInsuredPersonCheckedChange($event)" [parentForm]="panelControl">
+            <span translate>steps.addInfo.otherInsuredPerson</span>
+        </app-slide-toggle-field>
+        <ng-container *ngIf="hasInsuredPerson">
+            <app-client-info-panel [header]="'application.insuredPerson' | translate" [clientInfo]="insuredPerson"
+                [parentForm]="panelControl" [emailLabel]="'application.contactEmail' | translate">
+            </app-client-info-panel>
+        </ng-container>
+        <p translate>steps.addInfo.disclaimer</p>
+        <app-check-box labelPosition="after" [checked]="agreementsAccepted">
+            <span translate>application.agreements.acceptance</span>
+        </app-check-box>
+        <div fxLayout="column">
+            <ul class="ul-reduced-format">
+                <li>
+                    <app-addinfo-terms-download [checked]="agreements.termsAndConditions">
+                        <!--TODO - replace html label with a component -->
+                        <app-translated-label label="application.agreements.termsAndConditions"></app-translated-label>
+                    </app-addinfo-terms-download>
+                </li>
+                <li>
+                    <app-addinfo-terms-download [checked]="agreements.productInfo">
+                        <!-- TODO - replace html label with a component -->
+                        <app-translated-label label="application.agreements.product"></app-translated-label>
+                    </app-addinfo-terms-download>
+                </li>
+                <li>
+                    <app-addinfo-terms-download [checked]="agreements.gdpr">
+                        <span translate>application.agreements.gdpr</span>
+                    </app-addinfo-terms-download>
+                </li>
+                <li>
+                    <app-addinfo-terms-download [checked]="agreements.contractualInfo">
+                        <span translate>application.agreements.contractualInfo</span>
+                    </app-addinfo-terms-download>
+                </li>
+            </ul>
+            <app-check-box labelPosition="after" [checked]="agreementsAccepted">
+                <span translate>application.agreements.eContact</span>
+            </app-check-box>
+        </div>
+    </div>
+</section>

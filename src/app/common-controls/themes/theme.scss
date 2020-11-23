@@ -1,0 +1,154 @@
+@import "fonts.scss";
+
+@function theme-foreground() {
+  @return (
+    base: $lighter-color,
+    //      divider:           $white-12-opacity,
+    //      dividers:          $white-12-opacity,
+    //      disabled:          rgba($color, 0.38),
+    //      disabled-button:   rgba($color, 0.38),
+    //      disabled-text:     rgba($color, 0.38),
+    //elevation:         black,
+    //      hint-text:         rgba($color, 0.38),
+    secondary-text: $lighter-color,
+    //      icon:              rgba($color, 0.54),
+    //      icons:             rgba($color, 0.54),
+    text: $lighter-color //      slider-off:        rgba($color, 0.26),
+    //      slider-off-active: rgba($color, 0.38),
+    //s      slider-min:        rgba($color, 0.38)
+  );
+}
+
+@function theme-background() {
+  @return (
+    //    status-bar: map_get($mat-grey, 300),
+    //    app-bar:    map_get($mat-grey, 100),
+    //    background: $action-color,
+    hover: $default-color,
+    // Visually disables hover effect
+    //    card:       white,
+    //    dialog:     white,
+    //    disabled-button: rgba(black, 0.12),
+    raised-button: $action-color,
+    //    focused-button: $dark-focused,
+    //    selected-button: map_get($mat-grey, 300),
+    //    selected-disabled-button: map_get($mat-grey, 400),
+    //    disabled-button-toggle: map_get($mat-grey, 200),
+    //    unselected-chip: map_get($mat-grey, 300),
+    //    disabled-list-option: map_get($mat-grey, 200),
+    //    tooltip: map_get($mat-grey, 700)
+  );
+}
+
+@include angular-material-theme(
+  map-merge(
+    $theme,
+    (
+      foreground: theme-foreground(),
+      background: theme-background(),
+    )
+  )
+);
+
+@import "styles.scss";
+
+p {
+  color: $default-color;
+}
+
+h2 {
+  color: $default-color;
+}
+
+.panel-colors-default {
+  background-color: $default-color;
+}
+
+.panel-colors-lighter {
+  background-color: $lighter-color;
+}
+
+.panel-colors-darker {
+  background-color: $darker-color;
+}
+
+.panel-colors-bright {
+  background-color: $bright-color;
+  color: $default-color;
+}
+
+.panel-rounded-default {
+  @extend .panel-rounded;
+  @extend .panel-colors-default;
+}
+
+.panel-rounded-lighter {
+  @extend .panel-rounded;
+  @extend .panel-colors-lighter;
+}
+
+.panel-rounded-darker {
+  @extend .panel-rounded;
+  @extend .panel-colors-darker;
+}
+
+.panel-rounded-bright {
+  @extend .panel-rounded;
+  @extend .panel-colors-bright;
+}
+
+.section-main {
+  @extend .padding-medium;
+  @extend .panel-colors-lighter;
+}
+
+.form-panel {
+  @extend .form-panel-shape;
+  @extend .panel-colors-lighter;
+}
+
+.form-section-panel {
+  @extend .form-section-panel-shape;
+  @extend .panel-colors-bright;
+}
+
+.form-inner-panel {
+  @extend .form-inner-panel-shape;
+  @extend .panel-colors-lighter;
+}
+
+.section-button {
+  .mat-flat-button {
+    @extend .section-button-shape;
+    background-color: $bright-color;
+    color: $default-color;
+  }
+}
+
+.select-field {
+  @extend .border-solid;
+  padding-left: $size-small;
+  padding-right: $size-small;
+  display: inline-block;
+  margin: $size-smallest;
+  color: $default-color;
+  width: 60%;
+  .mat-form-field-wrapper {
+    padding: 0;
+  }
+  .mat-form-field-infix {
+    border: 0;
+  }
+  .mat-select-arrow {
+    color: $accent-color;
+    border-left: $size-smallest solid transparent;
+    border-right: $size-smallest solid transparent;
+    border-top: $size-smallest solid;
+  }
+}
+
+.date-field {
+  background-color: $darker-color;
+}
+
+@import "theme-overrides.scss";

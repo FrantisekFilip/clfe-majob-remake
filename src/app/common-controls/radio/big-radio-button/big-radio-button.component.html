@@ -1,0 +1,8 @@
+<mat-radio-button #radioButton [value]="value">
+  <div [ngClass]="selected? 'rounded-box-active':'rounded-box'" fxLayout="column" fxLayoutAlign="top center">
+    <img [src]="image" *ngIf="image" fxFlex="70">
+    <span fxFlex="30" class="padding-horizontal-small" style="text-align: center">
+      <ng-content></ng-content>
+    </span>
+  </div>
+</mat-radio-button>

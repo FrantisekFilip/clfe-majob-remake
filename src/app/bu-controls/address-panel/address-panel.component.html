@@ -1,0 +1,23 @@
+<h3><b>{{header}}</b></h3>
+<div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="start end">
+        <div style="width: 50%;">
+            <app-text-field [value]="address.streetName" [parentForm]="panelControl">
+                <span translate>address.streetName</span>
+            </app-text-field>
+        </div>
+        <app-text-field [value]="address.registrationNumber" [parentForm]="panelControl">
+            <span translate>address.registrationNumber</span>
+        </app-text-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start end">
+        <div style="width: 50%;">
+            <app-text-field [value]="address.postcode" [parentForm]="panelControl">
+                <span translate>address.postcode</span>
+            </app-text-field>
+        </div>
+        <app-text-field [value]="address.municipality" [parentForm]="panelControl">
+            <span translate>address.municipality</span>
+        </app-text-field>
+    </div>
+</div>

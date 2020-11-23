@@ -1,0 +1,27 @@
+<section class="section-main">
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <h2 translate>home.title</h2>
+        <p mat-line translate>home.welcome</p>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center" class="panel-rounded-bright margin-small">
+        <mat-radio-group [(ngModel)]="applicationRoute" class="padding-medium">
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="1em">
+                <app-big-radio-button [value]="routeCitizenApp" image="assets/images/products/citizen_insurance.svg">
+                    {{citizenInsuranceName}}
+                </app-big-radio-button>
+                <app-big-radio-button [value]="routeEmployeeApp" image="assets/images/products/employee_insurance.svg">
+                    {{employeeInsuranceName}}
+                </app-big-radio-button>
+            </div>
+        </mat-radio-group>
+        <p class="padding-small" style="text-align: center">
+            <app-translated-label label="home.description"></app-translated-label>
+        </p>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <app-next-button [redirectTo]="applicationRoute" class="margin-smallest"></app-next-button>
+    </div>
+</section>
+<section>
+    <app-terms-conditions-panel></app-terms-conditions-panel>
+</section>

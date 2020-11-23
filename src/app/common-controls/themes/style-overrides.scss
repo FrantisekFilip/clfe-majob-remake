@@ -1,0 +1,9 @@
+.mat-expansion-panel {
+    .mat-expanded {
+        height: $mat-expansion-panel-header-collapsed-height;
+    }
+}
+
+.mat-checkbox-label {
+    white-space: normal;
+}

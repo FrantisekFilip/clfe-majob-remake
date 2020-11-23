@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+    <div class="form-toggle-field-label">
+        <ng-content></ng-content>
+    </div>
+    <div>
+        <mat-slide-toggle *ngIf="!disabled" (toggleChange)="checked=!checked" [labelPosition]="labelPosition"
+            (change)="onChange($event)" [formControl]="fieldControl" color="primary">
+        </mat-slide-toggle>
+        <span *ngIf="disabled">
+            <span *ngIf="checked" translate>labels.yesU</span>
+            <span *ngIf="!checked" translate>labels.noU</span>
+        </span>
+    </div>
+</div>
